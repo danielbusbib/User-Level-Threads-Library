@@ -1,0 +1,63 @@
+m  q:  1
+m  q:  2
+m  q:  3
+          spawn f at (1) 1
+          spawn g at (2) 2
+f  q:  1
+g  q:  1
+m  q:  4
+f  q:  2
+g  q:  2
+m  q:  5
+f  q:  3
+          f suspend by f
+g  q:  3
+m  q:  6
+          g suspend by main
+          g suspend again by main
+m  q:  7
+m  q:  8
+m  q:  9
+          f resume by main
+          f resume again by main
+f  q:  4
+m  q:  10
+f  q:  5
+m  q:  11
+f  q:  6
+          g resume by f
+m  q:  12
+g  q:  4
+f  q:  7
+m  q:  13
+          spawn f at (1) 3
+          f suspend by main
+g  q:  5
+f  q:  1
+m  q:  14
+g  q:  6
+f  q:  2
+m  q:  15
+g  q:  7
+f  q:  3
+          f suspend by f
+m  q:  16
+g  q:  8
+m  q:  17
+          spawn g at (2) 4
+          f terminate by main
+          spawn f at (1) 1
+          f suspend by main
+g  q:  9
+g  q:  1
+m  q:  18
+g  q:  10
+g  q:  2
+m  q:  19
+g  q:  11
+          **g end**
+g  q:  3
+m  q:  20
+          ******end******
+total quantums:  44
+
