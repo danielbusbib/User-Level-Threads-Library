@@ -8,6 +8,7 @@ Implementation of User Level Threads, including switching between threads
 ### Algorithm
 -----------
 **The Round-Robin scheduling policy should work as follows:**
+
   1. Every time a thread is moved to RUNNING state, it is allocated a predefined number of microseconds to run. This time interval is called a quantum.
   
   2. The RUNNING thread is preempted if any of the following occurs:  
@@ -23,7 +24,7 @@ Implementation of User Level Threads, including switching between threads
  
  
     `> If it was preempted because its quantum has expired, move it to the end of the READY threads list.`\
-    `> Move the next thread in the queue of READY threads to RUNNING state`
+    `> Move the next thread in the queue of READY threads to RUNNING state`\
     `> Every time a thread moves to the READY state from any other state, it is placed at the end of the list of READY threads`
     
     
