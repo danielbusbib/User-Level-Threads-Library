@@ -11,10 +11,10 @@ Implementation of User Level Threads, including switching between threads
   1. Every time a thread is moved to RUNNING state, it is allocated a predefined number of microseconds to run. This time interval is called a quantum.\
   
   2. The RUNNING thread is preempted if any of the following occurs:\
-    `* Its quantum expires.\
-     * It changed its state to BLOCKED and is consequently waiting for an event (i.e. some other
+    `a) Its quantum expires.
+     b) changed its state to BLOCKED and is consequently waiting for an event (i.e. some other
     thread that will resume it or after some time has passed – more details below).\
-    * It is terminated.`\
+     c) It is terminated.`\
  
  3. When the RUNNING thread is preempted, do the following:\
    '* If it was preempted because its quantum has expired, move it to the end of the READY
