@@ -14,10 +14,10 @@ Implementation of User Level Threads, including switching between threads
     `* Its quantum expires.\
      * It changed its state to BLOCKED and is consequently waiting for an event (i.e. some other
     thread that will resume it or after some time has passed – more details below).\
-    * It is terminated.\`
+    * It is terminated.`\
  
  3. When the RUNNING thread is preempted, do the following:\
-   ` * If it was preempted because its quantum has expired, move it to the end of the READY
+   '* If it was preempted because its quantum has expired, move it to the end of the READY
     threads list.\
     * Move the next thread in the queue of READY threads to RUNNING state.\
     * Every time a thread moves to the READY state from any other state, it is placed at the end of the
