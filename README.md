@@ -8,16 +8,16 @@ Implementation of User Level Threads, including switching between threads
 ### Algorithm
 -----------
 **The Round-Robin scheduling policy should work as follows:**
-  1. Every time a thread is moved to RUNNING state, it is allocated a predefined number of microseconds to run. This time interval is called a quantum.\
+  1. Every time a thread is moved to RUNNING state, it is allocated a predefined number of microseconds to run. This time interval is called a quantum.
   
   2. The RUNNING thread is preempted if any of the following occurs:  
     
-    `
-     a) Its quantum expires.  
-     b) changed its state to BLOCKED and is consequently waiting for an event (i.e. some other
-    thread that will resume it or after some time has passed – more details below).  
-     c) It is terminated.
-    ` 
+    
+     `a) Its quantum expires.`  
+     `b) changed its state to BLOCKED and is consequently waiting for an event (i.e. some other
+    thread that will resume it or after some time has passed – more details below).`  
+     `c) It is terminated.`
+     
  
  3. When the RUNNING thread is preempted, do the following:\
    
