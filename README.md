@@ -23,8 +23,8 @@ Implementation of User Level Threads, including switching between threads
  3. When the RUNNING thread is preempted, do the following:
  
  
-    * `If it was preempted because its quantum has expired, move it to the end of the READY threads list.`\
-    * `Move the next thread in the queue of READY threads to RUNNING state`\
+    * `If it was preempted because its quantum has expired, move it to the end of the READY threads list.`
+    * `Move the next thread in the queue of READY threads to RUNNING state`
     * `Every time a thread moves to the READY state from any other state, it is placed at the end of the list of READY threads`
     
     
